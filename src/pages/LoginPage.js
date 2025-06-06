@@ -1,17 +1,18 @@
 import React from "react";
 import * as styles from '../styles/LoginPage.module.css';
+import LoginForm from "../components/LoginForm";
 
 const LoginPage = () => {
     return (
-        <div className={styles.container}>
-            <div className={styles.imagePanelContainer}>
+        <section className={styles.container}>
+            <section className={styles.imagePanelContainer}>
                 <span>Hi</span>
-            </div>
+            </section>
             
-            <div className={styles.loginFormContainer}>
-                <span>Hi</span>
-            </div>
-        </div>
+            <section className={styles.loginFormContainer}>
+                <LoginForm />
+            </section>
+        </section>
     );
 };
 

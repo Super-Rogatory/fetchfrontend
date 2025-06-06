@@ -1,0 +1,107 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem; /* 16px gap between sections */
+    width: 100%;
+}
+/* MAIN CONTENT */
+.formMainContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: .8rem;
+    text-align: center;
+    margin-top: 0px;
+}
+
+.input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    background-color: transparent;
+    border: 1px solid #f6f2e8;;
+    border-radius: 8px;
+}
+
+.inputSectionContainer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    width: 90%;
+}
+
+.inputMainOptions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+
+/* For the text that appears above the input field */
+.label {
+    font-size: 0.8rem;
+    margin-bottom: 0.25rem;
+    align-self: flex-starts;
+}
+
+.checkboxLabel {
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    gap: 0.1rem;
+}
+
+.checkbox {
+    background-color: transparent;
+    border: 1px solid #f6f2e8;;
+    width: 0.8rem;
+    height: 0.8rem;
+    cursor: pointer;
+}
+/* FOOTER CONTENT */
+.formFooterContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.formFooterSigninButton {
+    width: 90%;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #f6f2e8;
+    background-color: #2e0533;
+    border: 1px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.formFooterSigninButton:hover {
+    background-color: #890075;
+}
+
+.formFooterLabel {
+    font-size: 0.8rem;
+    margin-top: 0.7rem;
+}
+
+.formFooterLink {
+    text-decoration: none;
+}
+/* purple color: #2e0533 | hover purple color: #890075 */
+/* gray color: #f6f2e8 */
