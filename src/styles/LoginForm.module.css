@@ -13,15 +13,34 @@
     width: 100%;
 }
 
+.dogImageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 1rem auto; /* top right bottom left */
+    width: 55px;
+    height: 55px;
+    border-radius: 10px;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+}
+
+.dogImage {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
 .title {
     font-size: 1.5rem;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
+    font-weight: bold;
 }
 
 .subtitle {
     font-size: .8rem;
     text-align: center;
     margin-top: 0px;
+    font-weight: lighter;
 }
 
 .input {
@@ -29,8 +48,14 @@
     padding: 0.75rem 1rem;
     font-size: 1rem;
     background-color: transparent;
-    border: 1px solid #f6f2e8;;
+    border: 1px solid #978d73;
     border-radius: 8px;
+}
+
+.input:focus {
+    outline: none;
+    border-color: #7f5af0;
+    box-shadow: 0 0 0 3px rgba(127, 90, 240, 0.2);
 }
 
 .inputSectionContainer {
@@ -65,7 +90,7 @@
 
 .checkbox {
     background-color: transparent;
-    border: 1px solid #f6f2e8;;
+    border: 1px solid #f6f2e8;
     width: 0.8rem;
     height: 0.8rem;
     cursor: pointer;
@@ -93,6 +118,7 @@
 
 .formFooterSigninButton:hover {
     background-color: #890075;
+    color: white;
 }
 
 .formFooterLabel {

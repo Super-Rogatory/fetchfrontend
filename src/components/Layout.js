@@ -5,7 +5,7 @@ import * as styles from '../styles/Layout.module.css';
 const Layout = () => {
     return (
         <section className={styles.container}>
-            <main  >
+            <main>
                 <Outlet />
             </main>
         </section>

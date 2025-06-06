@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import * as styles from '../styles/LoginForm.module.css';
+import dog from '../assets/dog-competition.png';
 
 const LoginForm = () => {
     const [formData, setFromData] = useState({ username: '', password: '', remember: false });
@@ -16,7 +17,9 @@ const LoginForm = () => {
     return (
         <form className={styles.form}>
             <section className={styles.formMainContent}>
-                {/* image of dog (use fetch icon) */}
+                <section className={styles.dogImageContainer}>
+                    <img src={dog} alt="Dog chasing a ball" className={styles.dogImage} />
+                </section>
                 <h2 className={styles.title}>Your Dream Dog Awaits</h2>
                 <h6 className={styles.subtitle}>Please enter your details to sign in!</h6>
                 <section className={styles.inputSectionContainer}>

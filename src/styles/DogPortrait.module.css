@@ -1,0 +1,15 @@
+.dogPortraitContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    background-color: transparent;
+    box-shadow: 0 1px 40px rgba(0, 0, 0, 0.5);
+    border-radius: 50px;
+}
+
+.dogPortrait {
+    max-height: 100%;
+    border-radius: 50px;
+    object-fit: contain;
+}

@@ -1,12 +1,13 @@
 import React from "react";
 import * as styles from '../styles/LoginPage.module.css';
 import LoginForm from "../components/LoginForm";
+import DogPortrait from "../components/DogPortrait";
 
 const LoginPage = () => {
     return (
         <section className={styles.container}>
             <section className={styles.imagePanelContainer}>
-                <span>Hi</span>
+                <DogPortrait />
             </section>
             
             <section className={styles.loginFormContainer}>

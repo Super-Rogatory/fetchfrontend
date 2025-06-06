@@ -10,6 +10,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background: linear-gradient(to bottom, rgba(160, 90, 200, 0.08) 0%, #f6f2e8 40%, #fdfbf7 100%); /* yield tint transitions from 0-40%, 40 to 100% of the container */
     height: 100vh;
 }
 
