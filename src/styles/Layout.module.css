@@ -1,0 +1,17 @@
+main {
+    flex: 1; /* Grow to fill space (vertical | flex-dir column */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* purple color: #2e0533 */
+/* gray color: #f6f2e8 */
