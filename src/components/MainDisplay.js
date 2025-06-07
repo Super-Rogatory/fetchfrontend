@@ -1,6 +1,6 @@
 import React from "react";
 import FilterSidebar from "./FilterSidebar";
-import ResultsArea from "./ResultsArea";
+import DogResultsGrid from "./DogResultsGrid";
 import * as styles from "../styles/MainDisplay.module.css";
 
 const MainDisplay = () => {
@@ -10,7 +10,8 @@ const MainDisplay = () => {
                 <FilterSidebar/>
             </section>
             <section className={styles.resultsArea}>
-                <ResultsArea />
+                {/* <MainAreaDetailBar /> | x breeds available, current filters, clear filter */}
+                <DogResultsGrid />
             </section>
         </section>
     )
