@@ -11,8 +11,8 @@ const App = () => {
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Layout />}>
-                    <Route index element={<LoginPage />} /> {/* default route */}
-                    <Route path="/search" element={<SearchPage />} /> {/* after login */}
+                    <Route index element={<SearchPage />} /> {/* default route */}
+                    <Route path="/search" element={<LoginPage />} /> {/* after login */}
                     <Route path="*" element={<NoPage />} /> {/* catch all, no page handler */}
                 </Route>
             </Routes>
