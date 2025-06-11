@@ -4,12 +4,12 @@ import TopSearchBar from "../components/TopSearchBar.js";
 import MainDisplay from "../components/MainDisplay.js";
 
 const SearchPage = () => {
-
-    
     return (
         <section className={styles.container}>
-            <section className={styles.topSearchBar}>
-                <TopSearchBar />
+            <section className={styles.dividingContainer}>
+                <section className={styles.topSearchBar}>
+                    <TopSearchBar />
+                </section>
             </section>
             <section className={styles.mainDisplay}>
                 <MainDisplay />

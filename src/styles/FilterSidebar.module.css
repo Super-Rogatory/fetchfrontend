@@ -11,7 +11,7 @@ h3 {
 
 hr {
   border: none;
-  border-top: 1px solid #f4f4f4;
+  border-top: 1px solid black;
   margin: .8rem 0;
   width: 100%;
   align-self: center;
@@ -22,8 +22,8 @@ hr {
 }
 
 .filterButton {
-  border: 1px solid #f1e4e4;
-  background-color: #f1e4e4;
+  border: 1px solid #000000;
+  background-color: transparent;
   padding: 0.2rem 0.5rem;
   cursor: pointer;
   border-radius: 6px;
