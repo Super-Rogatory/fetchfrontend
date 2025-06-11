@@ -1,6 +1,7 @@
 import React, { useCallback, useState } from "react";
 import * as styles from '../styles/FilterSidebar.module.css';
 import { Slider } from "./Slider";
+import { useFilters } from '../context/FilterContext';
 
 const FilterSidebar = () => {
     const breedList = [
@@ -19,11 +20,18 @@ const FilterSidebar = () => {
         "Senior (8+)"
     ];
 
-    const [selectedBreed, setSelectedBreed] = useState([]);
-    const [selectedAge, setSelectedAge] = useState([]);
-    const [sliderRange, setSliderRange] = useState({ min: 0, max: 20 });
-    const [sliderSelected, setSliderSelected] = useState(false);
+    const {
+        selectedBreed,
+        setSelectedBreed,
+        selectedAge,
+        setSelectedAge,
+        sliderRange,
+        setSliderRange,
+        sliderSelected,
+        setSliderSelected
+    } = useFilters();
     const [showBreeds, setShowBreeds] = useState(true);
+    
     const SLIDER_MIN = 0;
     const SLIDER_MAX = 20;
 

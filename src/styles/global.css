@@ -2,8 +2,32 @@ html, body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Metropolis', sans-serif;
 }
 
 *, *::before, *::after {
     box-sizing: border-box
 }
+
+@font-face {
+    font-family: 'Metropolis';
+    src: url('/public/metropolis_font/Metropolis-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Metropolis';
+    src: url('/public/metropolis_font/Metropolis-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+  
+@font-face {
+    font-family: 'Metropolis';
+    src: url('/public/metropolis_font/Metropolis-Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+  
+  

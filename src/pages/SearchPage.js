@@ -2,6 +2,7 @@ import React from "react";
 import * as styles from "../styles/SearchPage.module.css";
 import TopSearchBar from "../components/TopSearchBar.js";
 import MainDisplay from "../components/MainDisplay.js";
+import { FilterProvider } from "../context/FilterContext";
 
 const SearchPage = () => {
     return (
@@ -12,7 +13,9 @@ const SearchPage = () => {
                 </section>
             </section>
             <section className={styles.mainDisplay}>
-                <MainDisplay />
+                <FilterProvider>
+                    <MainDisplay />
+                </FilterProvider>
             </section>
             
         </section>
