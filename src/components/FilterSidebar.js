@@ -23,10 +23,11 @@ const FilterSidebar = () => {
     const [selectedAge, setSelectedAge] = useState([]);
     const [sliderRange, setSliderRange] = useState({ min: 0, max: 20 });
     const [sliderSelected, setSliderSelected] = useState(false);
+    const [showBreeds, setShowBreeds] = useState(true);
     const SLIDER_MIN = 0;
     const SLIDER_MAX = 20;
 
-    const toggleBread = (breed) => {
+    const toggleBreed = (breed) => {
         setSelectedBreed((prev) => 
             prev.includes(breed) ? prev.filter((b) => b !== breed) : [...prev, breed]
         );
@@ -43,22 +44,29 @@ const FilterSidebar = () => {
         setSliderRange({ min, max });
     }, []);
 
-    const handleSliderStop = useCallback(({ min, max}) => {
+    const handleSliderStop = useCallback(({ min, max }) => {
         console.log("Final value:", min, max)   
     }, []);
 
     return (
         <section className={styles.container}>
-            <h3>Filter By</h3>
+            <h2>Filter By</h2>
             {/* Filtering by Breed */}
             <hr />
             <section className={styles.filterNameGroup}>
-                <h4>Breed</h4>
-                {breedList.map((breed) => (
+                <section
+                    onClick={() => setShowBreeds(!showBreeds)}
+                    style={{ cursor: "pointer", display: "flex", justifyContent: "space-between" }}
+                >
+                    <h3>Breed</h3>
+                    <span>{showBreeds ? "▲" : "▼"}</span>
+                </section>
+                { showBreeds && 
+                breedList.map((breed) => (
                     <section className={styles.buttonGroup}>
                         <button
                             key={breed}
-                            onClick={() => toggleBread(breed)}
+                            onClick={() => toggleBreed(breed)}
                             className={`${styles.filterButton} ${
                                 selectedBreed.includes(breed) ? styles.selected : ""
                             }`}
@@ -75,7 +83,7 @@ const FilterSidebar = () => {
             {/* Age Group Filtering */}
             <hr />
             <section className={styles.filterAgeGroup}>
-                <h4>Age Group</h4>
+                <h3>Age Group</h3>
                 {ageList.map((age) => (
                     <section className={styles.buttonGroup}>
                         <button
@@ -122,7 +130,7 @@ const FilterSidebar = () => {
                                 sliderTrack: {
                                     colors: {
                                         inRange: "#e22e2e",
-                                        outRange: "#7c7c7c"
+                                        outRange: "#f1e4e4"
                                     }
                                 },
                                 sliderThumb: {
@@ -138,6 +146,11 @@ const FilterSidebar = () => {
                         </section>
                     </section>
                 )}
+                <hr />
+                <section className={styles.filterLocationGroup}>
+                    {/* TODO */}
+                    <h3>Location Group</h3>
+                </section>
             </section>
         </section>
     );
