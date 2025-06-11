@@ -5,7 +5,7 @@ const FilterContext = createContext(); // created a shared store for the SearchP
 export const FilterProvider = ({ children }) => {
     const [selectedBreed, setSelectedBreed] = useState([]);
     const [selectedAge, setSelectedAge] = useState([]);
-    const [sliderRange, setSliderRange] = useState({ min: 0, max: 20 });
+    const [ageRange, setAgeRange] = useState({ min: 0, max: 20 });
     const [sliderSelected, setSliderSelected] = useState(false);
     const [sortOrder, setSortOrder] = useState("asc");
 
@@ -13,7 +13,7 @@ export const FilterProvider = ({ children }) => {
         setSelectedBreed([]);
         setSelectedAge([]);
         setSliderSelected(false);
-        setSliderRange({ min: 0, max: 20 });
+        setAgeRange({ min: 0, max: 20 });
     };
 
     return (
@@ -23,8 +23,8 @@ export const FilterProvider = ({ children }) => {
                 setSelectedBreed,
                 selectedAge,
                 setSelectedAge,
-                sliderRange,
-                setSliderRange,
+                ageRange,
+                setAgeRange,
                 sliderSelected,
                 setSliderSelected,
                 sortOrder,

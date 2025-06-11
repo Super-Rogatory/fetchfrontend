@@ -25,13 +25,13 @@ const FilterSidebar = () => {
         setSelectedBreed,
         selectedAge,
         setSelectedAge,
-        sliderRange,
-        setSliderRange,
+        ageRange,
+        setAgeRange,
         sliderSelected,
         setSliderSelected
     } = useFilters();
     const [showBreeds, setShowBreeds] = useState(true);
-    
+
     const SLIDER_MIN = 0;
     const SLIDER_MAX = 20;
 
@@ -49,7 +49,7 @@ const FilterSidebar = () => {
     };
 
     const handleSliderChange = useCallback(({ min, max }) => {
-        setSliderRange({ min, max });
+        setAgeRange({ min, max });
     }, []);
 
     const handleSliderStop = useCallback(({ min, max }) => {
@@ -128,8 +128,8 @@ const FilterSidebar = () => {
                 {sliderSelected && (
                     <section className={styles.sliderWrapper}>
                         <Slider
-                            min={sliderRange.min}
-                            max={sliderRange.max}
+                            min={ageRange.min}
+                            max={ageRange.max}
                             minRange={SLIDER_MIN}
                             maxRange={SLIDER_MAX}
                             onChange={handleSliderChange}
@@ -150,7 +150,7 @@ const FilterSidebar = () => {
                             }}
                         />
                         <section className={styles.rangeDisplay}>
-                            <span>{sliderRange.min} yrs</span> – <span>{sliderRange.max} yrs</span>
+                            <span>{ageRange.min} yrs</span> – <span>{ageRange.max} yrs</span>
                         </section>
                     </section>
                 )}

@@ -12,13 +12,16 @@
     height: 100%;
 }
 
-.resultsArea {
+.mainDetailsContainer {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     background-color: rgba(220, 220, 220, .7);
     flex: 1 0 auto;
     height: 100%;
     min-width: 0;
+}
+
+.mainDetails {
+    width: 97%;
 }

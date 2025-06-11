@@ -1,0 +1,63 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 75px;
+    padding: 1rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #ddd;
+}
+  
+.resultCount h2 {
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+.activeFilters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    flex: 1;
+    justify-content: center;
+}
+
+.filterPill {
+    display: flex;
+    align-items: center;
+    background-color: #e22e2e;
+    color: white;
+    border-radius: 2rem;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+}
+
+.filterPill button {
+    margin-left: 0.5rem;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.filterActions {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.clearButton,
+.sortButton {
+    padding: 0.4rem 0.8rem;
+    border: 1px solid #ccc;
+    background: rgba(220, 220, 220, .7);
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.clearButton:hover,
+.sortButton:hover {
+    border-color: #999;
+}

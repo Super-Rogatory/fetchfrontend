@@ -10,11 +10,13 @@ const MainDisplay = () => {
             <section className={styles.filterSideBar}>
                 <FilterSidebar/>
             </section>
-            <section className={styles.resultsArea}>
-                {/* <MainAreaDetailBar /> | x breeds available, current filters, clear filter */}
-                <MainGridDetailBar />
-                <DogResultsGrid />
-            </section>
+            <section className={styles.mainDetailsContainer}>
+                <section className={styles.mainDetails}>
+                    {/* <MainAreaDetailBar /> | x breeds available, current filters, clear filter */}
+                    <MainGridDetailBar />
+                    <DogResultsGrid />
+                </section>
+            </section>   
         </section>
     )
 };
