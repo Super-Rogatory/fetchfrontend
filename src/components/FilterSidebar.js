@@ -43,6 +43,9 @@ const FilterSidebar = () => {
         setSliderRange({ min, max });
     }, []);
 
+    const handleSliderStop = useCallback(({ min, max}) => {
+        console.log("Final value:", min, max)   
+    }, []);
 
     return (
         <section className={styles.container}>
@@ -114,18 +117,18 @@ const FilterSidebar = () => {
                             minRange={SLIDER_MIN}
                             maxRange={SLIDER_MAX}
                             onChange={handleSliderChange}
-                            onStop={({ min, max }) => console.log("Final value:", min, max)}
-                            styles={{
+                            onStop={handleSliderStop}
+                            styleConfig={{
                                 sliderTrack: {
                                     colors: {
                                         inRange: "#e22e2e",
-                                        outRange: "#ccc"
+                                        outRange: "#7c7c7c"
                                     }
                                 },
                                 sliderThumb: {
                                     colors: {
                                         fill: "#e22e2e",
-                                        outline: "#fff"
+                                        outline: "#e22e2e"
                                     }
                                 }
                             }}

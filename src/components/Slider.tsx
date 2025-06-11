@@ -73,7 +73,7 @@ export const Slider: React.FC<SliderProps> = ({
       />
       <input
         style={thumbStyle} 
-        className={styles.sliderInput}
+        className={`input ${styles.sliderMin}`}
         onMouseUp={(e) =>
           onStop?.({
             min: internalMin,
@@ -95,7 +95,7 @@ export const Slider: React.FC<SliderProps> = ({
       />
       <input
         style={thumbStyle} 
-        className={styles.sliderInput}
+        className={`input ${styles.sliderMax}`}
         onChange={(e) => {
           const newValue = Number(e.target.value);
           if (newValue >= internalMin) {
