@@ -10,7 +10,7 @@ const MainGridDetailBar = () => {
     setSortOrder,
     clearFilters
   } = useFilters();
-
+  
   return (
     <section>
       <span>{/* show selected filters */}</span>
