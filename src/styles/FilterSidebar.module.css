@@ -1,0 +1,94 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  gap: 0.5rem;
+}
+
+h4 {
+  margin-top: 0px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #f4f4f4;
+  margin: 1rem 0;
+  width: 100%;
+  align-self: center;
+}
+
+.filterNameGroup {
+  margin-top: 0px;
+}
+
+.filterButton {
+  border: 1px solid #f1e4e4;
+  background-color: #f1e4e4;
+  padding: 0.2rem 0.5rem;
+  cursor: pointer;
+  border-radius: 6px;
+  text-align: left;
+  font-size: 0.95rem;
+  transition: background-color 0.2s ease;
+}
+
+.breedButton:hover {
+  border-color: #2e0533;
+  background-color: transparent;
+}
+
+.selected {
+  background-color: #e22e2e;
+  color: #f1e4e4;
+  border-color: #e22e2e;
+}
+
+.buttonGroup {
+  display: flex;
+  flex-direction: row;
+  gap: .7rem;
+  margin-bottom: 10px;
+}
+
+.breedOption {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+
+.selected {
+  background-color: #e22e2e;
+  color: #f4f4f4;
+}
+
+.checkmark {
+  width: 1rem;
+  display: inline-block;
+  text-align: center;
+}
+
+.filterAgeGroup {
+
+}
+
+/* Wraps the slider + min/max text */
+.sliderWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+/* Displays the selected min and max age range */
+.rangeDisplay {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: #333;
+  padding: 0 0.25rem;
+}

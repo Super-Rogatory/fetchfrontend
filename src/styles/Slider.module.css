@@ -1,0 +1,80 @@
+.container {
+    width: 90vw;
+    height: 100vh;
+    background-color: black;
+    padding: 20px;
+  }
+  
+.sliderItem {
+    margin: 50px 0px;
+}
+
+.sliderContainer {
+    width: 100%;
+    position: relative;
+    padding: 5px;
+}
+  
+.sliderInput[type="range"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    position: absolute;
+    background: transparent;
+    pointer-events: auto;
+    top: 0;
+    bottom: 0;
+}
+
+.sliderInput[type="range"]::-webkit-slider-runnable-track {
+    height: 5px;
+}
+
+.sliderInput[type="range"]::-moz-range-track {
+    height: 5px;
+}
+
+.sliderInput[type="range"]::-ms-track {
+    height: 5px;
+}
+
+.sliderInput[type="range"]::-webkit-slider-thumb,
+.sliderInput[type="range"]::-moz-range-thumb,
+.sliderInput[type="range"]::-ms-thumb {
+    height: 1.7em;
+    width: 1.7em;
+    background-color: var(--thumb-fill-color);
+    border-radius: 50%;
+    cursor: pointer;
+    pointer-events: auto;
+    margin-top: -8px;
+}
+
+.sliderInput[type="range"]:first-of-type::-webkit-slider-thumb {
+    margin-left: -8px;
+}
+
+.sliderInput[type="range"]:first-of-type::-moz-range-thumb {
+    margin-left: -8px;
+}
+
+.sliderInput[type="range"]:first-of-type::-ms-thumb {
+    margin-left: -8px;
+}
+
+.sliderInput[type="range"]::-webkit-slider-thumb:hover,
+.sliderInput[type="range"]::-moz-range-thumb:hover,
+.sliderInput[type="range"]::-ms-thumb:hover {
+    outline: var(--thumb-outline-color) solid 2px;
+}
+
+.sliderTrack {
+    width: 100%;
+    height: 8px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    border-radius: 5px;
+}
