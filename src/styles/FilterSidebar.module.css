@@ -5,13 +5,17 @@
   gap: 0.5rem;
 }
 
+h2 {
+  margin-bottom: 0px;
+}
+
 h3 {
   margin-top: 0px;
 }
 
 hr {
   border: none;
-  border-top: 1px solid black;
+  border-top: 1px solid rgb(201, 199, 199);
   margin: .8rem 0;
   width: 100%;
   align-self: center;
