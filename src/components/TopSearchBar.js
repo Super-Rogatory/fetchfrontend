@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import * as styles from "../styles/TopSearchBar.module.css";
 import gridIcon from "../assets/grid.png";
 import listIcon from "../assets/list.png";
+import searchIcon from "../assets/search-icon.png";
 
 const TopSearchBar = () => {
     const name = "Test";
@@ -17,6 +18,13 @@ const TopSearchBar = () => {
                 <h2>Hi, {name}</h2>
             </section>
             <section className={styles.searchSection}>
+                <section className={styles.searchIconContainer}>
+                    <img
+                        src={searchIcon}
+                        className={styles.searchIcon}
+                        aria-label="Search Icon"
+                    />
+                </section>
                 <input
                     type="text"
                     name="breed"
