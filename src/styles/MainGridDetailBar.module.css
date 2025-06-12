@@ -8,7 +8,7 @@
     flex-wrap: wrap;
     border-bottom: 1px solid #ddd;
 }
-  
+
 .resultCount h2 {
     font-size: 1.25rem;
     margin: 0;
@@ -47,17 +47,35 @@
     align-items: center;
 }
 
-.clearButton,
+.clearButton {
+    height: 60%;
+}
+
+.clearButtonGroup,
 .sortButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
     padding: 0.4rem 0.8rem;
     border: 1px solid #ccc;
     background: rgba(220, 220, 220, .7);
     border-radius: 6px;
     cursor: pointer;
     font-weight: 500;
+    height: 35px;
 }
 
-.clearButton:hover,
+.clearButtonGroup:hover,
 .sortButton:hover {
     border-color: #999;
+}
+
+.arrows {
+    width: 12px;
+    height: 12px;
+}
+
+.down {
+    transform: rotate(180deg);
 }

@@ -1,6 +1,8 @@
 import React from 'react';
 import { useFilters } from '../context/FilterContext';
 import * as styles from "../styles/MainGridDetailBar.module.css";
+import refresh from "../assets/refresh.png";
+import longUpArrow from "../assets/skinnylongarrow.png";
 
 const MainGridDetailBar = () => {
   const {
@@ -70,9 +72,11 @@ const MainGridDetailBar = () => {
 
         {/* actions */}
         <section className={styles.filterActions}>
-            <button onClick={clearFilters} className={styles.clearButton}>Clear Filters</button>
+            <button onClick={clearFilters} className={styles.clearButtonGroup}>Clear Filters
+                <img src={refresh} className={styles.clearButton} />
+            </button>
             <button onClick={toggleSort} className={styles.sortButton}>
-            Sort {sortOrder === 'asc' ? '↑' : '↓'}
+            Sort {sortOrder === 'asc' ? <img src={longUpArrow} className={styles.arrows} /> : <img src={longUpArrow} className={`${styles.arrows} ${styles.down}`} />}
             </button>
         </section>
     </section>

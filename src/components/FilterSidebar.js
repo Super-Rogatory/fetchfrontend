@@ -1,7 +1,8 @@
 import React, { useCallback, useState } from "react";
-import * as styles from '../styles/FilterSidebar.module.css';
+import * as styles from "../styles/FilterSidebar.module.css";
 import { Slider } from "./Slider";
-import { useFilters } from '../context/FilterContext';
+import { useFilters } from "../context/FilterContext";
+import thinCarrotArrow from "../assets/skinnycarrotarrow.png";
 
 const FilterSidebar = () => {
     const breedList = [
@@ -67,7 +68,7 @@ const FilterSidebar = () => {
                     style={{ cursor: "pointer", display: "flex", justifyContent: "space-between" }}
                 >
                     <h3>Breed</h3>
-                    <span>{showBreeds ? "▲" : "▼"}</span>
+                    <span>{showBreeds ? <img src={thinCarrotArrow} className={`${styles.arrow} ${styles.up}`} /> : <img src={thinCarrotArrow} className={styles.arrow} />}</span>
                 </section>
                 { showBreeds && 
                 breedList.map((breed) => (
